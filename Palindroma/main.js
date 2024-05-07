@@ -11,15 +11,6 @@ if(isPalindroma(palindroma)) console.log('Palindroma');
 else console.log('Non palindroma');
 
 
-
-
-
-
-
-
-
-
-
 function isPalindroma (parola){
     let palindroma2="";
     const buffer = new Array(parola.length);
@@ -28,8 +19,6 @@ function isPalindroma (parola){
         buffer[parola.length-1-count]=parola[count];
     }
     palindroma2=buffer.toString().replace(/,/g,'');
-    console.log(parola);
-    console.log(palindroma2);
     if(parola!==palindroma2){
         return false;
     } else return true;
