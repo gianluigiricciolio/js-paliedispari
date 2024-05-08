@@ -1,5 +1,6 @@
 'use strict';
 
+
 // L’utente sceglie pari o dispari
 const scelta = sceltaTipo();
 console.log(scelta);
@@ -10,13 +11,16 @@ console.log(numeroUtente);
 const numeroComputer = sceltaNumeroComputer();
 console.log(numeroComputer);
 
-// Sommiamo i due numeri e
+// Sommiamo i due numeri
+
+const somma = numeroUtente+numeroComputer;
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
-if(scelta===pariDispari(numeroUtente+numeroComputer)) console.log('Hai vinto');
+if(scelta===pariDispari(somma)) console.log('Hai vinto');
 else console.log('Ha vinto il PC');
 
 
+// FUNZIONI
 
 function sceltaNumeroComputer() {
     return Math.ceil(Math.random()*5);
@@ -40,5 +44,5 @@ function sceltaTipo() {
 
 function pariDispari(num){
     if(num%2==0) return "pari";
-    else return "dispari";
+    return "dispari";
 }
